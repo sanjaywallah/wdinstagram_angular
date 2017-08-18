@@ -1,1 +1,5 @@
-<h2>WDInstagrams</h2>
+<h1>WDInstagram Entries</h1>
+
+<div ng-repeat="entry in vm.entries | orderBy:'-created_at'">
+  <p><a ui-sref="entryShow({id: entry.id})">{{entry.body}}</a></p>
+</div>
